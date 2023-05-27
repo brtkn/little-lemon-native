@@ -20,7 +20,7 @@ import {
 import debounce from "lodash.debounce";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import { Searchbar } from "react-native-paper";
-import Filters from "../Filters";
+import Filters from "../components/Filters";
 
 const URL =
   "https://raw.githubusercontent.com/Meta-Mobile-Developer-PC/Working-With-Data-API/main/capstone.json";

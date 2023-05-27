@@ -5,28 +5,28 @@ const Filters = ({ onChange, selections, sections }) => {
     <View style={styles.filtersContainer}>
       {sections.map((section, index) => (
         <TouchableOpacity
-          key={index}
           onPress={() => {
             onChange(index);
           }}
           style={{
-            flex: 1 / sections.length,
+            flex: 1,
             justifyContent: "center",
             alignItems: "center",
-            padding: 16,
-            backgroundColor: selections[index] ? "#495e57" : "#edefee",
-            borderRadius: 9,
-            marginRight: 15,
+            padding: 12,
+            backgroundColor: selections[index] ? "#EE9972" : "#495E57",
+            borderWidth: 1,
+            borderColor: "white",
+            height: 45,
+            borderRadius: 12,
           }}
         >
           <View>
             <Text
               style={{
-                fontFamily: "Karla-ExtraBold",
-                color: selections[index] ? "#edefee" : "#495e57",
+                color: selections[index] ? "black" : "white",
               }}
             >
-              {section.charAt(0).toUpperCase() + section.slice(1)}
+              {section}
             </Text>
           </View>
         </TouchableOpacity>
@@ -37,11 +37,10 @@ const Filters = ({ onChange, selections, sections }) => {
 
 const styles = StyleSheet.create({
   filtersContainer: {
-    backgroundColor: "#fff",
+    backgroundColor: "white",
     flexDirection: "row",
     alignItems: "center",
     marginBottom: 16,
-    paddingLeft: 15,
   },
 });
 
