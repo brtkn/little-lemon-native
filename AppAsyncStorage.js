@@ -58,8 +58,8 @@ export default function App() {
           </Stack.Screen>
         ) : (
           <>
-            <Stack.Screen name="Home" component={Home} />
             <Stack.Screen name="Profile" component={Profile} />
+            <Stack.Screen name="Home" component={Home} />
           </>
         )}
       </Stack.Navigator>
