@@ -19,6 +19,7 @@ const Filters = ({ onChange, selections, sections }) => {
             height: 45,
             borderRadius: 12,
           }}
+          key={index}
         >
           <View>
             <Text

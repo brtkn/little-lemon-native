@@ -22,7 +22,7 @@ export default function App() {
     }
   };
 
-  const handleSignIn = async () => {
+  /* const handleSignIn = async () => {
     try {
       await AsyncStorage.setItem("isSignedIn", "true");
       setIsSignedIn(true);
@@ -42,7 +42,7 @@ export default function App() {
     } catch (error) {
       console.log(error);
     }
-  };
+  }; */
 
   React.useEffect(() => {
     checkIsSignedIn();

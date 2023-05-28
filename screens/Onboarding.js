@@ -7,6 +7,7 @@ import {
   Pressable,
   StyleSheet,
 } from "react-native";
+import Home from "./Home";
 
 import { validateEmail } from "../utils";
 

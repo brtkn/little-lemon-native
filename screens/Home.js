@@ -4,8 +4,6 @@ import {
   Text,
   Image,
   Pressable,
-  FlatList,
-  SafeAreaView,
   StyleSheet,
   Alert,
   SectionList,
@@ -71,7 +69,7 @@ const Item = ({ name, price, description, image }) => (
   </View>
 ); */
 
-const Home = ({ navigation }) => {
+const Home = () => {
   const [listData, setListData] = useState([]);
   const [searchbarText, setSearchbarText] = useState("");
   const [query, setQuery] = useState("");
@@ -86,9 +84,9 @@ const Home = ({ navigation }) => {
     image: "",
   });
 
-  const handleProfile = () => {
-    navigation.navigate("Profile");
-  };
+  /* const handleProfile = () => {
+    navigation.navigate("Onboarding");
+  }; */
 
   const fetchListData = async () => {
     try {
@@ -183,7 +181,7 @@ const Home = ({ navigation }) => {
         }}
       >
         <Image source={require("../assets/Logo.png")} />
-        <Pressable onPress={handleProfile}>
+        <Pressable>
           <Image
             source={require("../assets/Profile.png")}
             resizeMode="cover"
@@ -199,7 +197,7 @@ const Home = ({ navigation }) => {
           <Text
             style={{
               color: "#EDEFEE",
-              fontSize: 19,
+              fontSize: 20,
               fontWeight: "500",
               padding: 5,
             }}
@@ -216,7 +214,7 @@ const Home = ({ navigation }) => {
             padding: 5,
           }}
         >
-          <Text style={{ width: "45%", color: "#EDEFEE", fontSize: 19 }}>
+          <Text style={{ width: "55%", color: "#EDEFEE", fontSize: 17 }}>
             We are a family owned Mediterranean restaurant, focused on
             traditional recipes served with a modern twist.
           </Text>
@@ -225,7 +223,7 @@ const Home = ({ navigation }) => {
             resizeMode="cover"
             style={{
               height: 125,
-              width: 125,
+              width: 155,
               borderRadius: 15,
               marginRight: 25,
             }}
